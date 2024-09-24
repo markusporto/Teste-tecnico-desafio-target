@@ -6,6 +6,8 @@ IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua 
 
 */
 public class Desafio {
+
+    //logica de calculo para numeros Fibonacci.
     static long fibo (int n) {
         if (n < 2) {
             return n;
@@ -17,14 +19,14 @@ public class Desafio {
 
 
     public static void main(String[] args) {
-        Scanner leia = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-
+    // recebe o numero a ser verificado
         System.out.println("Digite um numero: ");
-        int num= leia.nextInt();
+        int num= scanner.nextInt();
 
         boolean fibonacci = false;
-
+    // verifica se o numero coletado e Fibonacci.
         for (int i = 0; i < 30 ; i++) {
             long fib = Desafio.fibo(i);
             if (num == fib){
@@ -33,6 +35,7 @@ public class Desafio {
             }
 
         }
+    // Imprime o resultado
         if (fibonacci) {
             System.out.println(num + ": E um numero Fibonacci");
         } else {
